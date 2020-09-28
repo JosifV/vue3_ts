@@ -1,0 +1,27 @@
+# napravis novi projekat
+vue create vue3_typescript_template
+# izaberes default(babel, eslint)
+
+# udjes konzolom u projekat i prevedes ga u typeScript (ovo je mnogo intuitivnije u reactu)
+vue add typescript
+# izaberes za nesto YES za nesto NO, zavisi kako hoces
+
+# u root folderu clienta instaliras vue3 (cak i ako ne uradis ovo preveo si projekat u typeScript i radice i bez vue3)
+npm install vue@next
+
+# instaliraj novi compajler za vue3
+npm i @vue/compiler-sfc
+
+# u svakom <script> tagu dodas lang="ts"
+<script lang="ts">
+
+# u main.ts namestis da bude ovako
+import { createApp } from 'vue'
+import App from './App.vue'
+let rootApp = createApp(App as any)
+rootApp.mount('#app')
+
+# i to je to, kad se zavrsi instalacija pokrenes uobicajno 
+npm run serve
+http://localhost:8080
+
