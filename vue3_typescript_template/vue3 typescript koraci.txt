@@ -1,13 +1,18 @@
 # napravis novi projekat
-vue create vue3_typescript_template
+vue create vue3_typescript_template_full_exmpl
 # izaberes default(babel, eslint)
 
 # udjes konzolom u projekat i prevedes ga u typeScript (ovo je mnogo intuitivnije u reactu)
 vue add typescript
 # izaberes za nesto YES za nesto NO, zavisi kako hoces
+Y Y Y N Y
 
-# u root folderu clienta instaliras vue3 (cak i ako ne uradis ovo preveo si projekat u typeScript i radice i bez vue3)
+# u root folderu clienta instaliras vue 3 (cak i ako ne uradis ovo preveo si projekat u typeScript i radice i bez vue3)
 npm install vue@next
+
+# ako hoces instaliraj i vuex i vue-router
+npm i vuex@next
+npm i vue-router@next
 
 # instaliraj novi compajler za vue3
 npm i @vue/compiler-sfc

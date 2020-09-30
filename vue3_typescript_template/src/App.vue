@@ -1,28 +1,22 @@
 <template>
   <div id="app">
-    <div class="navCont">
-      <router-link to="/one"> <span>ONE</span></router-link>
-      <router-link to="/two"><span>TWO</span></router-link>
-      <router-link :to="`/prop/${counterGetter}`"
-        ><span>PROP {{ counterGetter }}</span></router-link
-      >
-    </div>
-
-    <router-view></router-view>
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
-<script lang="ts">
-import { mapGetters } from "vuex";
-export default {
-  name: "App",
+<script>
+import HelloWorld from './components/HelloWorld.vue'
 
-  computed: {
-    ...mapGetters(["counterGetter"]),
-  },
-};
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
+  }
+}
 </script>
 
 <style>
 @import "./style/App.scss";
 </style>
+
