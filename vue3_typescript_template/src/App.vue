@@ -1,24 +1,28 @@
 <template>
   <div id="app">
-    ABV
+    <div class="navCont">
+      <router-link to="/one"> <span>ONE</span></router-link>
+      <router-link to="/two"><span>TWO</span></router-link>
+      <router-link :to="`/prop/${counterGetter}`"
+        ><span>PROP {{ counterGetter }}</span></router-link
+      >
+    </div>
+
+    <router-view></router-view>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { mapGetters } from "vuex";
 export default {
-  name: 'App',
-  components: {
-  }
-}
+  name: "App",
+
+  computed: {
+    ...mapGetters(["counterGetter"]),
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "./style/App.scss";
 </style>
