@@ -1,5 +1,5 @@
 # napravis novi projekat
-vue create vue3_typescript_template
+vue create vue3_typescript_template_composition_api
 # izaberes default(babel, eslint)
 
 # udjes konzolom u projekat i prevedes ga u typeScript (ovo je mnogo intuitivnije u reactu)
