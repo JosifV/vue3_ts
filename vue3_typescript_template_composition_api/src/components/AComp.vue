@@ -11,6 +11,7 @@
 
 <script lang="ts">
 import { inject } from "vue";
+
 export default {
   props: ["userName", "objNum", "nameChangeHandler"],
   //* 7 drugi arg koji setup metod ima jeste context
@@ -22,7 +23,11 @@ export default {
     // console.log(context);
 
     //* 7 i onda samo posaljes event iz komponente
-    const emitWarningHandler = () => context.emit('mouseOver', 123)
+    const emitWarningHandler = () => {
+      context.emit('mouse-over-event', 123)
+
+      //* 7a ::: i dalje trazim nacin da se emituje eventBus event
+      }
 
     //* 8 i primis injected vrednost navodeci njeno dodeljeno ime kao arg inject funkcije
     let injectedVal = inject('providedValueName')

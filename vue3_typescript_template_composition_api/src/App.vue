@@ -5,6 +5,7 @@
       :userName="userName"
       :objNum="obj.num"
       :nameChangeHandler="nameChangeHandler"
+      @mouse-over-event="listenForMouseOver"
     />
     <br />
     <BComp :firstName="firstName" :lastName="lastName" />
@@ -95,8 +96,11 @@ export default {
       );
     });
 
-    //* 7 primanje eventa ::: cekam na odgovor pa cu dodati
-    // context.on('mouseOver', (payload:number)=>console.log(`WARNING >>> Mouse over the button num ::: ${payload}`))
+    //* 7 primanje eventa ::: cekam na odgovor  da li je moguce primati u sibling komponenti pa cu dodati
+    const listenForMouseOver = ( payload:number) => console.log(`WARNING >>> Mouse over the button num ::: ${payload}`)
+    // eventBus.$on('event-bus-exmpl', (payload:number)=> console.log(`WARNING >>> Mouse over the button num ::: ${payload}`))
+    //* 7a 
+    // console.log(`FROM EVENT RECIEVED ::: ${useExmplEvent().exmplEventOn(789)}`);
 
     //* 8 u setupu navedes provide, i u argsima definises ime vrednosti, i samu vrednost
     const someProvideVal = ref("someProvidedValue");
@@ -131,7 +135,8 @@ export default {
       firstName,
       lastName,
       calcUserName,
-      addStoreHandler
+      addStoreHandler,
+      listenForMouseOver
     };
   },
 };
