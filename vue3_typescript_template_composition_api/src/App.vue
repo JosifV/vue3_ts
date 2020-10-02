@@ -11,6 +11,9 @@
     <br />
     <VComp />
     <button @click="addStoreHandler">Add to store counter</button>
+    <br>
+    <GComp/>
+    <DComp/>
   </div>
 </template>
 
@@ -18,6 +21,8 @@
 import AComp from "./components/AComp.vue";
 import BComp from "./components/BComp.vue";
 import VComp from "./components/VComp.vue";
+import GComp from "./components/GComp.vue";
+import DComp from "./components/DComp.vue";
 
 import {
   ref,
@@ -43,6 +48,8 @@ import {  useStore } from "vuex";
 //* 8 - provide & inject / App.vue i AComp.vue
 //* 9 - lifecycle hooks
 //* 10 - vuex & composition API / unutar App.vue i BComp.vue
+//* 11 - mixins - option API / unutar mixins/showHide.ts i GComp.vue
+//* 12 - hooks - composition API / unutar hooks/someHook.ts i EComp.vue
 
 export default {
   props: [], //* 1 props i komponente ostaju ovde, van setup metoda
@@ -50,6 +57,8 @@ export default {
     AComp,
     BComp,
     VComp,
+    GComp,
+    DComp
   },
   setup() {
     //* 1 ref() je dobar za obicne vrednosti
