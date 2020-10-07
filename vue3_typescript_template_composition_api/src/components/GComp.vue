@@ -12,7 +12,7 @@ import EComp from "./EComp.vue";
 import mixin from "../mixins/showHide";
 
 export default {
-  //* 11 mixini mogu samo sa options API ?
+  //* 11 mixini mogu samo sa options API 
   //* 11 ovako uvezes mixine
   mixins: [mixin],
 

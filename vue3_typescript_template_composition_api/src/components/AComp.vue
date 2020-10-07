@@ -19,15 +19,11 @@ export default {
     //* 7 context kad se loguje izgleda kao prazan objekat, no ima 3 elementa
     //* 7 attrs: to su atributi koji su preneti na ovu komponentu, no ne kao props, vec kao html atributi, npr ovde cemo naci ime css klase koju smo dodeli komponenti u App.vue - class: "aComp"
     //* 7 slots: sluzi da programaticki pristupis podacima slot komponente
-    //* 7 emit: i najbitnije, emmit sluzi da emitujes eventove iz ove komponente
+    //* 7 emit: i najbitnije, emit sluzi da emitujes eventove iz ove komponente
     // console.log(context);
 
     //* 7 i onda samo posaljes event iz komponente
-    const emitWarningHandler = () => {
-      context.emit('mouse-over-event', 123)
-
-      //* 7a ::: i dalje trazim nacin da se emituje eventBus event
-      }
+    const emitWarningHandler = () => context.emit('mouse-over-event', 123)
 
     //* 8 i primis injected vrednost navodeci njeno dodeljeno ime kao arg inject funkcije
     let injectedVal = inject('providedValueName')

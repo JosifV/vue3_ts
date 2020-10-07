@@ -45,7 +45,7 @@ import {  useStore } from "vuex";
 //* 4 - watch
 //* 5 - ref dom elements / unutar VComp.vue
 //* 6 - setup props args / unutar BComp.vue
-//* 7 - setup context args / EVENTOVI / unutar AComp.vue
+//* 7 - setup context args / EVENTOVI / unutar App.vue i AComp.vue
 //* 8 - provide & inject / App.vue i AComp.vue
 //* 9 - lifecycle hooks
 //* 10 - vuex & composition API / unutar App.vue i BComp.vue
@@ -96,11 +96,8 @@ export default {
       );
     });
 
-    //* 7 primanje eventa ::: cekam na odgovor  da li je moguce primati u sibling komponenti pa cu dodati
+    //* 7 primanje eventa ::: eventBus se vise ne koristi u vue3
     const listenForMouseOver = ( payload:number) => console.log(`WARNING >>> Mouse over the button num ::: ${payload}`)
-    // eventBus.$on('event-bus-exmpl', (payload:number)=> console.log(`WARNING >>> Mouse over the button num ::: ${payload}`))
-    //* 7a 
-    // console.log(`FROM EVENT RECIEVED ::: ${useExmplEvent().exmplEventOn(789)}`);
 
     //* 8 u setupu navedes provide, i u argsima definises ime vrednosti, i samu vrednost
     const someProvideVal = ref("someProvidedValue");
